@@ -1,0 +1,87 @@
+.col{
+  display: flex;
+  position: relative;
+}
+.news-item{
+  margin-left: 25rpx;
+  margin-top: 25rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 200rpx;
+}
+.news-text{
+  text-align: left;
+  width: 480rpx;
+}
+.news-title{
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+.news-desc{
+  font-size: 30rpx;
+  line-height: 56rpx;
+  opacity: 0.7;
+}
+
+.news-imgage{
+  width: 270rpx;
+  height: 170rpx;
+  margin-left: 10rpx;
+  margin-right: 25rpx;
+}
+
+.news-head{
+  margin-left: 25rpx;
+  margin-top: 25rpx;
+}
+.news-head-image{
+  width: 700rpx;
+  height: 400rpx;
+}
+.news-head-text{
+  display: flex;
+  position: absolute;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+}
+.news-head-title{
+  margin-top: 220rpx;
+  color: white;
+  font-size: 40rpx;
+  line-height: 56rpx;
+  font-weight: bold;
+}
+.news-head-des{
+  display: flex;
+  position: absolute;
+  margin-top: 335rpx;
+  color: white;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+.swiper-tab{  
+  width: 100%;  
+  text-align: center;  
+  line-height: 80rpx;
+  background-color: #aae1fc;
+}  
+.swiper-tab-list{  
+  font-size: 36rpx;  
+  display: inline-block;  
+  width: 14.28%;  
+  color: white;  
+}  
+.on{ 
+  color: #da7c0c;
+  font-weight: bold;  
+  border-bottom: 5rpx solid #da7c0c;
+}  
+.swiper-box{ 
+  display: block; height: 100%; width: 100%; overflow: hidden; 
+}  
+.swiper-box view{  
+    text-align: center;  
+}  

@@ -1,0 +1,37 @@
+<view class='news-wrapper'>
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==index ? 'on' : ''}}" 
+          data-current="{{index}}" bindtap="onTapNewsList"
+          wx:for="{{newsTypeHeaders}}" wx:for-item="type" wx:for-index="index" 
+          data-typeid='{{type.id}}'>
+      {{type.desc}}
+    </view>  
+  </view>
+  
+  <view class='news-list'> 
+    <view wx:for="{{newsListByTpe}}" wx:for-index="index" wx:for-item="item" 
+          bindtap='OnTapNewsDetail' data-id='{{item.id}}'>
+      <view class='news-head' wx:if="{{index==0}}">
+        <view class='news-head-text'>
+          <view class='news-head-title'>{{item.title}}</view>
+          <view class='news-head-des col'>
+            {{item.source}} {{item.date}}
+          </view>
+        </view>
+        <image class='news-head-image' src='{{item.firstImage}}' mode='scaleToFill'></image>
+      </view>
+
+      <view class='news-item col' wx:if="{{index!=0}}">
+        <view class='news-text'>
+          <view class='news-title'>{{item.title}}</view>
+          <view class='news-desc col'>
+            {{item.source}} {{item.date}}
+          </view>
+        </view>
+        <image class='news-imgage' src='{{item.firstImage}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
