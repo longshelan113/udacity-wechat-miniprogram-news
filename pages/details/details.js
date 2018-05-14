@@ -22,6 +22,9 @@ Page({
     })
     this.getNewsDetails()
   },
+  /**
+   * 得到detail页面信息
+   */
   getNewsDetails(){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
@@ -29,14 +32,13 @@ Page({
         id: this.data.id
       },
       success: res => {
-        console.log(res)
         if(res.data.code === 200){
           let result = res.data.result
-          //result.source = result.source == "" ? result.source = "网络媒体" : result.source
+          result.source = result.source == "" ? result.source = "网络媒体" : result.source
           result.date = result.date.slice(0, 10) + ' ' + result.date.slice(11, 16)
           this.setData({
             ...result,
-            //source: result.source,
+            source: result.source,
             date: result.date,
           })
         }else{

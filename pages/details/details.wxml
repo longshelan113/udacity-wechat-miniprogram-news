@@ -1,16 +1,16 @@
 <view class='news-wrapper'>
   <view class='title'>{{title}}</view>
   <view class='desc'>
-    <view class='date'>{{source}} {{date}}</view>
+    <view class='date'>{{date}} {{source}}</view>
     <view class='readCount'>阅读：{{readCount}}</view>
   </view>
 
   <view class='content'>
-    <view class="content_item" wx:for="{{content}}" wx:for-item="item">
+    <view class="content_item" wx:for="{{content}}" wx:key="item">
       <text wx:if="{{item.type == 'strong'}}" class='type_strong'>{{item.text}}</text>
       <image wx:if="{{item.type == 'image'}}" class='type_image' 
             mode='scaleToFill' src='{{item.src}}'></image>
-      <text wx:if="{{item.type == 'p'}}" class='type_P'>{{item.text}}</text>
+      <text wx:else class='type_{{item.type}}'>{{item.text}}</text>
   </view>
   </view>
 </view>
